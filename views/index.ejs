@@ -1,0 +1,41 @@
+<% include ./partials/header%>
+<div class="image">
+        <div class="container">
+                <div class="row">
+                    <div class="ui huge header">
+                        <div id="content">
+                            <div class="text">
+                                <h1>Adopt A Dog Today</h1>
+                            
+                        <h3>A Companion For Life</h3>
+                        <hr>
+                        <button class="ui floated huge blue button">Get Started!! <i class="paw icon"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <img src="https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+</div> 
+                <% dogs.forEach((dog) => { %>
+                    <div class="ui container">
+                        <div class='ui large images rounded'>
+                            <img class="ui image" src="<%= dog.image %>">
+                             <div class="extra">
+                                 <p class="ui centered text"><%= dog.name %></p>
+                                 <a class='ui floated inverted small blue button' href="/dogs/<%= dog._id%>">
+                                    Read More
+                                <i class="paw icon"></i>
+                                    </a>
+                                </div>
+                        </div>
+                    </div>
+                   
+                <% }) %>
+
+</div>
+</div>
+
+<% include ./partials/footer%>
+
+  
+

@@ -1,0 +1,32 @@
+<% include ./partials/header%>
+<div class="ui main text container segment">
+    <div class="ui huge header">DETAILS</div>
+    <form class='ui fluid form' action="/dogs/<%=dog._id%>/adopt" method="GET">
+        <div class="field">
+            <label>Name</label>
+            <input type="text" placeholder="E.g Jane Doe" required>
+        </div>
+        <div class="field">
+            <label >Phone No</label>
+            <input type="number" placeholder="Number"  required>
+        </div>
+        <div class="field">
+                <label >Email</label>
+                <input type="email" placeholder="Email Address" required>
+            </div>
+        <div class="field">
+                <label >Address</label>
+                <input type="text" placeholder="Where do you live?" required>
+            </div>
+        <div class="field">
+                <label >Occupation</label>
+                <input type="text" placeholder="Where do you work?" required>
+            </div>
+        <div class="field">
+            <label >Why do you want a dog?</label>
+            <textarea  id="" cols="30" rows="10"></textarea>
+        </div>
+    <a class='ui blue inverted button' href="/dogs/<%=dog._id%>/page"> Submit <i class="paw icon"> </i> </a>
+    </form>
+</div>
+<% include ./partials/footer%>
